@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
+import 'package:url_launcher/url_launcher.dart';
+
 class EnhancedProfileSection extends StatefulWidget {
   const EnhancedProfileSection({super.key});
 
@@ -208,7 +210,7 @@ class _EnhancedProfileSectionState extends State<EnhancedProfileSection>
                           ],
                         ),
                         child: const Text(
-                          'Software Developer | Flutter | MERN Stack',
+                          'Software Developer | Flutter Developer  | MERN Stack',
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w500,
@@ -219,22 +221,64 @@ class _EnhancedProfileSectionState extends State<EnhancedProfileSection>
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
+                          Tooltip(
+                            message: 'Send an email',
+                            child: _buildContactButton(
+                              icon: Icons.email_outlined,
+                              label: 'poojaryabhishek26@gmail.com',
+                              onTap: () {
+                                launchUrl(Uri.parse(
+                                    'mailto:poojaryabhishek26@gmail.com'));
+                              },
+                            ),
+                          ),
+                          const SizedBox(width: 16),
+                          Tooltip(
+                            message: 'Call this number',
+                            child: _buildContactButton(
+                              icon: Icons.phone_outlined,
+                              label: '+919945726449',
+                              onTap: () {
+                                launchUrl(Uri.parse('tel:+919945726449'));
+                              },
+                            ),
+                          ),
+                          const SizedBox(width: 16),
+                          Tooltip(
+                            message: 'View location on map',
+                            child: _buildContactButton(
+                              icon: Icons.location_on_outlined,
+                              label: 'Bengaluru',
+                              onTap: () {
+                                launchUrl(Uri.parse(
+                                    'https://www.google.com/maps/search/?api=1&query=Bengaluru'));
+                              },
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
                           _buildContactButton(
-                            icon: Icons.email_outlined,
-                            label: 'poojaryabhishek26@gmail.com',
-                            onTap: () {},
+                            icon: Icons.link,
+                            label: 'GitHub',
+                            onTap: () {
+                              launchUrl(Uri.parse(
+                                  'https://github.com/Abhishek-poojary1'));
+                            },
                           ),
                           const SizedBox(width: 16),
                           _buildContactButton(
-                            icon: Icons.phone_outlined,
-                            label: '+919945726449',
-                            onTap: () {},
-                          ),
-                          const SizedBox(width: 16),
-                          _buildContactButton(
-                            icon: Icons.location_on_outlined,
-                            label: 'Bengaluru',
-                            onTap: () {},
+                            icon: Icons.business,
+                            label: 'LinkedIn',
+                            onTap: () {
+                              launchUrl(Uri.parse(
+                                  'https://www.linkedin.com/in/abhishek-poojary-a50281268'));
+                            },
                           ),
                         ],
                       ),

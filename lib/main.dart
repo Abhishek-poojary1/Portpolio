@@ -224,11 +224,41 @@ class _EnhancedSkillsSectionState extends State<EnhancedSkillsSection>
   final List<Map<String, dynamic>> skills = [
     {'name': 'Flutter', 'icon': Icons.mobile_friendly, 'color': Colors.blue},
     {'name': 'MERN Stack', 'icon': Icons.web, 'color': Colors.green},
-    {'name': 'Dart', 'icon': Icons.devices, 'color': Colors.purple},
-    {'name': 'Firebase', 'icon': Icons.storage, 'color': Colors.orange},
-    {'name': 'SQLite', 'icon': Icons.sync_alt, 'color': Colors.red},
-    {'name': 'javascript', 'icon': Icons.storage, 'color': Colors.teal},
-    {'name': 'Provider', 'icon': Icons.storage, 'color': Colors.teal},
+    {'name': 'Dart', 'icon': Icons.code, 'color': Colors.purple},
+    {
+      'name': 'Cross Platform Application',
+      'icon': Icons.devices_other_rounded,
+      'color': Colors.orange
+    },
+    {'name': 'javascript', 'icon': Icons.javascript, 'color': Colors.teal},
+    {
+      'name': 'Xcode',
+      'icon': Icons.insert_chart_outlined_sharp,
+      'color': Colors.orange
+    },
+    {'name': 'Andoird', 'icon': Icons.android, 'color': Colors.green},
+    {'name': 'IOS', 'icon': Icons.apple, 'color': Colors.indigo},
+    {'name': 'SQLite', 'icon': Icons.storage, 'color': Colors.red},
+    {
+      'name': 'Data Structure',
+      'icon': Icons.data_object_outlined,
+      'color': Colors.red
+    },
+    {
+      'name': 'Problem Solving',
+      'icon': Icons.report_problem_outlined,
+      'color': Colors.green
+    },
+    {
+      'name': 'Firebase',
+      'icon': Icons.local_fire_department_outlined,
+      'color': Colors.orange
+    },
+    {
+      'name': 'Provider',
+      'icon': Icons.personal_video_rounded,
+      'color': Colors.teal
+    },
   ];
 
   // For background particle animation

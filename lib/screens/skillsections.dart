@@ -14,6 +14,7 @@ class EducationSection extends StatelessWidget {
             degree: 'Bachelor of Computer Application',
             duration: '2020 - 2023',
             location: 'Bengaluru, Karnataka',
+            percentage: '74%',
           ),
           const Divider(),
           _buildEducationItem(
@@ -21,6 +22,7 @@ class EducationSection extends StatelessWidget {
             degree: 'Pre-University Course',
             duration: '2019 - 2020',
             location: 'Uppunda',
+            percentage: '77%',
           ),
           const Divider(),
           _buildEducationItem(
@@ -28,6 +30,7 @@ class EducationSection extends StatelessWidget {
             degree: 'Secondary School Leaving Certificate',
             duration: '2017 - 2018',
             location: 'Uppunda',
+            percentage: '79%',
           ),
         ],
       ),
@@ -39,6 +42,7 @@ class EducationSection extends StatelessWidget {
     required String degree,
     required String duration,
     required String location,
+    required String percentage,
   }) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8),
@@ -84,6 +88,20 @@ class EducationSection extends StatelessWidget {
                     const SizedBox(width: 4),
                     Text(
                       location,
+                      style: TextStyle(
+                        color: Colors.grey[600],
+                        fontSize: 14,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 4),
+                Row(
+                  children: [
+                    Icon(Icons.percent, size: 14, color: Colors.grey[600]),
+                    const SizedBox(width: 4),
+                    Text(
+                      'Percentage: $percentage',
                       style: TextStyle(
                         color: Colors.grey[600],
                         fontSize: 14,
